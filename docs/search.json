@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\nHi! My name is Megan. This site will exhibit all my assignments and projects I do within my STAT 210 R introduction course. I hope to advance my technical R skills and one day use these skills for research in marine science. Watch me advance throughout this semester and further along my career journey!\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "megan-redican-portfolio",
+    "section": "",
+    "text": "Megan Redican is a student of marine science at California State University, Monterey Bay."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "megan-redican-portfolio",
+    "section": "Education",
+    "text": "Education\nCalifornia State University | Monterey Bay | August 2021 - December 2025 | Current Field of Study - B.S.Marine Science"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "megan-redican-portfolio",
+    "section": "Experience",
+    "text": "Experience\nSunflower Star Laboratories | Volunteer Lab Assistant | June 2024 - Present\nPacific Grove Natural History Museum LIMPETS Program | Volunteer Data Collection Coordinator | March 2022 - August 2023\nAdventure Camp, Lagoon Valley Rescue | Vacaville, CA | Assistant Squad Leader | May 2017 - August 2021\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]

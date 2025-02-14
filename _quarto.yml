@@ -1,13 +1,15 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "megan-redican-portfolio"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      - href: about.qmd
+        text: "About Me"
 
 format:
   html:
