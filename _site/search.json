@@ -11,6 +11,20 @@
     "href": "index.html",
     "title": "megan-redican-portfolio",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Megan Redican is a student of marine science at California State University, Monterey Bay."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "megan-redican-portfolio",
+    "section": "Education",
+    "text": "Education\nCalifornia State University | Monterey Bay | August 2021 - December 2025 | Current Field of Study - B.S.Marine Science"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "megan-redican-portfolio",
+    "section": "Experience",
+    "text": "Experience\nSunflower Star Laboratories | Volunteer Lab Assistant | June 2024 - Present\nPacific Grove Natural History Museum LIMPETS Program | Volunteer Data Collection Coordinator | March 2022 - August 2023\nAdventure Camp, Lagoon Valley Rescue | Vacaville, CA | Assistant Squad Leader | May 2017 - August 2021\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]

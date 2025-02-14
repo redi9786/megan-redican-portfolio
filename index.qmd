@@ -11,11 +11,28 @@ about:
       text: Github
       href: https://github.com/redi9786/megan-redican-portfolio
 ---
+Megan Redican is a student of marine science at [California State University, Monterey Bay](https://csumb.edu/marinescience/).
+
+## Education
+
+California State University | Monterey Bay | August 2021 - December 2025 | Current Field of Study - B.S.Marine Science
+
+
+
+## Experience
+
+Sunflower Star Laboratories | Volunteer Lab Assistant | June 2024 - Present 
+
+Pacific Grove Natural History Museum LIMPETS Program | Volunteer Data Collection Coordinator | March 2022 - August 2023
+
+Adventure Camp, Lagoon Valley Rescue | Vacaville, CA |
+Assistant Squad Leader | May 2017 - August 2021
+
+
+
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
-```
+
