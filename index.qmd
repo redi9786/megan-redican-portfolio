@@ -2,14 +2,14 @@
 title: "megan-redican-portfolio"
 about:
   template: jolla
-  image: profile.jpg
+  image: IMG_6144.jpg
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/megan-redican-ab8565243/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/redi9786/megan-redican-portfolio
 ---
 
 This is a Quarto website.
