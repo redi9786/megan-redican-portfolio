@@ -9,3 +9,121 @@ Hi! My name is Megan. This site will exhibit all my assignments and projects I d
 ```{r}
 1 + 1
 ```
+
+```{r}
+library(tidyverse)
+library(vegan)
+library(dplyr)
+```
+
+```{r}
+urchin <- read.csv("~/Downloads/PISCO_Invertebrate_Swath_Data.csv")
+```
+
+```{r}
+CA_MPAs <- urchin %>%
+  filter(grepl("CCSR|SCSR|NCCSR", MLPA_REGN))
+
+
+urchin_plot <- ggplot(CA_MPAs, aes(x = site_status, y = swath_STRPURAD, fill = MLPA_REGN)) +
+  geom_boxplot() +
+  theme_classic() +
+  labs(x = "MLPA Region", y = "Swath STRPURAD")
+  
+
+print(urchin_plot)
+  
+
+```
+
+```{r EX1_filter}
+
+CA_MPAs <- urchin %>%
+  filter(grepl("CCSR|SCSR|NCCSR", MLPA_REGN))
+
+## now we'll add the two species of urchins together and make a new column called urchin
+CA_MPAs$urchin <- CA_MPAs$swath_STRPURAD + CA_MPAs$swath_MESFRAREC
+
+## Separate the southern CA sites
+invert_reference <- CA_MPAs %>%
+  filter(site_status == "reference")
+
+## Separate the central CA sites
+invert_MPA <- CA_MPAs %>%
+  filter(site_status == "MPA")
+
+```
+
+```{r EX1_visualization}
+
+## create a scatter plot
+
+kelp_plot <- ggplot(CA_MPAs, aes(x = urchin , y = swath_MACSTIPES)) +
+  geom_point() +
+  theme_classic()
+
+kelp_plot
+
+### we could also look by region we can use the MLPA region as a shortcut here SCSR - Southern California region CCSR - Central California 
+
+kelp_plot2 <- ggplot(CA_MPAs, aes(x = urchin, y = swath_MACSTIPES, color = site_status)) +
+  geom_point() +
+  theme_classic() +
+  labs(title = "Biomass of Kelp and Sea Urchins within MPA and Reference Sites", 
+       x = "Red and Purple Sea Urchin Biomass (g/m^2)", 
+       y = "Giant Kelp and Bull Kelp Biomass (g/m^2)")
+
+kelp_plot2
+
+
+
+
+```
+
+```{r}
+kelp_plot2 <- ggplot(CA_MPAs, aes(x = urchin, y = swath_MACSTIPES, color = site_status)) +
+  geom_point() +  # Scatterplot of the data points
+  geom_smooth(method = "loess", se = FALSE, color = "blue") +  # Adds a loess smoothing line
+  theme_classic() +
+  labs(title = "Biomass of Kelp and Sea Urchins within MPA and Reference Sites", 
+       x = "Red and Purple Sea Urchin Biomass (g/m^2)", 
+       y = "Giant Kelp and Bull Kelp Biomass (g/m^2)")
+
+kelp_plot2
+
+
+```
+
+```{r}
+kelp_plot2 <- ggplot(CA_MPAs, aes(x = urchin, y = swath_MACSTIPES, color = site_status)) +
+  geom_point() +
+  theme_classic() +
+  labs(title = "Biomass of Kelp and Sea Urchins within MPA and Reference Sites", 
+       x = "Red and Purple Sea Urchin Biomass (g/m^2)", 
+       y = "Giant Kelp and Bull Kelp Biomass (g/m^2)") +
+  facet_wrap(~site_status)  # This will create separate plots for each site_status
+
+kelp_plot2
+
+```
+
+```{r EX1_linear regression}
+
+# all sites together
+
+CA_lr <- lm(swath_MACSTIPES ~ urchin, CA_MPAs)
+summary(CA_lr)
+
+```
+
+```{r}
+# Fit the model (example)
+lm_model <- lm(swath_MACSTIPES ~ urchin, data = CA_MPAs)
+
+# Extract residuals
+residuals <- lm_model$residuals
+
+# QQ plot
+qqnorm(residuals)
+qqline(residuals, col = "red")
+```
